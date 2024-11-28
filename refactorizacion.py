@@ -1,12 +1,12 @@
-class FiguraGeometrica:
+class FiguraGeometrica: #Clase base para representar figuras geometricas
     def __init__(self, nombre):
         self.nombre = nombre
-
+#Metodos
     def calcular_area(self):
-        raise NotImplementedError("Subclases deben implementar este método")
-
+        raise NotImplementedError("Subclases deben implementar este método")#Método abstracto que debe ser implementado por las subclases para calcular el área.
+#Deben implementar el error
     def calcular_perimetro(self):
-        raise NotImplementedError("Subclases deben implementar este método")
+        raise NotImplementedError("Subclases deben implementar este método")#Método abstracto que debe ser implementado por las subclases para calcular el perímetro.
 
 class Rectangulo(FiguraGeometrica):
     def __init__(self, base, altura):
@@ -22,7 +22,7 @@ class Rectangulo(FiguraGeometrica):
 
 class Circulo(FiguraGeometrica):
     def __init__(self, radio):
-        super().__init__("Círculo")
+        super().__init__("Círculo")#Llama al constructor de la clase base
         self.radio = radio
 
     def calcular_area(self):
